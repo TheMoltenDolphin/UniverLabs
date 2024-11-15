@@ -21,9 +21,8 @@ bool read(int& cnt, string words[2000])
 		in >> words[cnt];
 		cnt++;
 	}
-	return true;
+	return false;
 }
-
 void cleanList(int& cnt, string words[2000])
 {
 	for (int i = 0; i < cnt; i++)
