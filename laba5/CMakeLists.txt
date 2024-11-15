@@ -1,21 +1,14 @@
-﻿# CMakeList.txt: проект CMake для laba5; включите исходный код и определения,
-# укажите здесь логику для конкретного проекта.
-#
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required(VERSION 3.15) # Проверка версии CMake.
+									 # Если версия установленой программы
+									 # старее указаной, произайдёт аварийный выход.
 
-# Включение горячей перезагрузки для компиляторов MSVC, если поддерживается.
-if (POLICY CMP0141)
-  cmake_policy(SET CMP0141 NEW)
-  set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
-endif()
+set(PROJECT_NAME example) 			 # задать значение PROJECT_NAME		 
+project("${PROJECT_NAME}")           # установить имя проекта
 
-project ("laba5")
 
-# Добавьте источник в исполняемый файл этого проекта.
-add_executable (laba5 "laba5.cpp" "laba5.h")
+set(CMAKE_CXX_STANDARD 17)			 # устанавливаем 17 стандарт языка
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET laba5 PROPERTY CXX_STANDARD 20)
-endif()
-
-# TODO: Добавьте тесты и целевые объекты, если это необходимо.
+# Сказать программе, что должен быть исполняемый файл
+add_executable("${PROJECT_NAME}" laba5.cpp)

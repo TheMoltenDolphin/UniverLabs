@@ -22,7 +22,7 @@ int main()
         << numeric_limits<unsigned char>::max() << "   " << sizeof(unsigned char) << endl;
     cout << "wchar_t -        " << "  " << WCHAR_MIN << "  "
         << WCHAR_MAX << "   " << sizeof(wchar_t) << endl;
-    cout << "char8_t -        " << "             " << sizeof(char8_t) << endl;
+    cout << "char8_t -        " << "             " << sizeof(char) << endl;
     cout << "char16_t -       " << "     "
         << UINT_LEAST16_MAX << "   " << sizeof(char16_t) << endl;
     cout << "char32_t -       " << "  "

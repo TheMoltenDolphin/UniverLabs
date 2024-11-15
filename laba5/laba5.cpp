@@ -9,7 +9,7 @@ int main()
 {	// N1
 	double in = 0;
 	int n = 0;
-	int pl = 0;
+	int pl = -1;
 	double mult = 1;
 	double min = numeric_limits<double>::max();
 	cin >> n;
@@ -23,7 +23,12 @@ int main()
 			}
 		}
 	}
-	cout << endl << mult << endl << min << endl << pl << endl;
+	if (pl != -1) {
+		cout << endl << mult << endl << min << endl << pl << endl;
+	}
+	else {
+		cout << "Таких чисел нет" << endl;
+	}
 
 
 
@@ -40,4 +45,6 @@ int main()
 	//	}
 	//}
 	//cout << min;
+
+	return 0;
 }
