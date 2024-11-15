@@ -1,3 +1,0 @@
-C:/_uNIC/example/build/CMakeFiles/example.dir
-C:/_uNIC/example/build/CMakeFiles/ALL_BUILD.dir
-C:/_uNIC/example/build/CMakeFiles/ZERO_CHECK.dir
